@@ -1,6 +1,7 @@
 import os
 from getpass import getpass
 from netmiko import ConnectHandler
+from pprint import pprint
 
 password = os.getenv("PYNET_PASSWORD") if os.getenv("PYNET_PASSWORD") else getpass()
 
@@ -12,8 +13,9 @@ cisco3 = {
 }
 
 net_connect = ConnectHandler(**cisco3)
-output = net_connect.send_command("show ip int br")
+output = net_connect.send_command("show ip int br", use_textfsm=True)
 
-print(output)
+pprint(output)
 
 net_connect.disconnect()
+
