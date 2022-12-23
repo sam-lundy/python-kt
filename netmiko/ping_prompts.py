@@ -6,7 +6,7 @@ cisco4 = {
     "host": 'cisco4.lasthop.io',
     "username": 'pyclass',
     "password": getpass(),
-    "device_type": 'cisco_ios'
+    "device_type": 'cisco_ios',
 }
 
 net_connect = ConnectHandler(**cisco4)
