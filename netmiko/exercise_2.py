@@ -3,7 +3,7 @@ from getpass import getpass
 
 
 cisco4 = {
-    "hostname": 'cisco4.lasthop.io',
+    "host": 'cisco4.lasthop.io',
     "username": 'pyclass',
     "password": getpass(),
     "device_type": 'cisco_ios'
