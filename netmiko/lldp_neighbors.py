@@ -15,7 +15,8 @@ cisco4 = {
 net_connect = ConnectHandler(**cisco4)
 output = net_connect.send_command("show lldp neighbors", use_textfsm=True)
 
-pprint(output)
+print("LLDP Data Structure Type: {}".format(type(output)))
+print("HPE Switch Connection Port: {}".format(output[0]["neighbor_interface"]))
 
 net_connect.disconnect()
 
