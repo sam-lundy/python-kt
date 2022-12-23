@@ -13,7 +13,7 @@ cisco3 = {
 }
 
 net_connect = ConnectHandler(**cisco3)
-output = net_connect.send_command("show ip int br", use_textfsm=True)
+output = net_connect.send_command("show ip arp", use_textfsm=True)
 
 pprint(output)
 
