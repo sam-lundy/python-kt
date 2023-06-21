@@ -1,5 +1,4 @@
 from netmiko import ConnectHandler
-import os
 
 csr1000v = {
     'host':	'sandbox-iosxe-recomm-1.cisco.com',
